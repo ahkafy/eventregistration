@@ -20,9 +20,7 @@
 
                             <div class="col-md-6">
                                 <select id="type" type="text" class="form-select form-control @error('type') is-invalid @enderror" name="type" value="{{ old('type') }}" required autocomplete="type">
-                                    <option value="student">Student - 100TK</option>
-                                    <option value="junior">General Participant - 200TK</option>
-                                    <option value="senior">Veterans - 500TK</option>
+                                    <option value="junior">General Participant - 300TK</option>
                                 </select>
                                 @error('type')
                                     <span class="invalid-feedback" role="alert">
