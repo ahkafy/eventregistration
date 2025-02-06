@@ -15,6 +15,22 @@
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
+                        <div class="row mb-3">
+                            <label for="type" class="col-md-4 col-form-label text-md-end">{{ __('Participant Type') }}</label>
+
+                            <div class="col-md-6">
+                                <select id="type" type="text" class="form-select form-control @error('type') is-invalid @enderror" name="type" value="{{ old('type') }}" required autocomplete="type">
+                                    <option value="student">Student - 100TK</option>
+                                    <option value="junior">General Participant - 200TK</option>
+                                    <option value="senior">Veterans - 500TK</option>
+                                </select>
+                                @error('type')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
 
                         <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>

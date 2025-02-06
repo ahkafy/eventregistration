@@ -75,12 +75,12 @@ class HomeController extends Controller
 
     public function index()
     {
-        if(auth()->user()->university == 'Jahangir Nagar University'){
+        if(auth()->user()->type == 'student'){
             $amount = 100;
-        }elseif(auth()->user()->university == 'Jahangirnagar University Alumni'){
-            $amount = 00;
+        }elseif(auth()->user()->type == 'junior'){
+            $amount = 200;
         }else{
-            $amount = 300;
+            $amount = 500;
         }
 
         $check = Transaction::where('user_id', auth()->user()->id)->first();
