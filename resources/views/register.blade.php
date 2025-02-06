@@ -5,7 +5,7 @@
 
     <div class="row justify-content-center">
         <div class="col-md-6 pb-4">
-
+            <img src="https://i.ibb.co.com/4g2mRzn5/JAMALPUR-RUNNER-COMMUNITY-LOGO-FINAL.png" width="90%" alt="">
         </div>
         <div class="col-md-6">
             <div class="card">
