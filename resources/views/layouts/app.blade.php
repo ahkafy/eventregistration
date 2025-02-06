@@ -54,7 +54,7 @@ fjs.parentNode.insertBefore(js, fjs);
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    <img src="{{ url('logo.jpg') }}" alt="" class="logo"> {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
@@ -110,7 +110,7 @@ fjs.parentNode.insertBefore(js, fjs);
         </main>
     </div>
     <div class="footer text-center">
-        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block pt-4 mt-4 pb-2 mb-2" style="font-size: 18px;">Built with <svg fill="#ff0000" height="24px" width="24px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-20.16 -20.16 544.20 544.20" xml:space="preserve" stroke="#ff0000" transform="matrix(-1, 0, 0, 1, 0, 0)" stroke-width="0.00503876"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="9.069768"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M469.361,71.689c-32.071-35.681-70.026-54.532-109.761-54.532c-44.309,0-84.27,27.01-107.654,71.638 c-23.334-44.628-62.993-71.638-106.857-71.638c-39.743,0-76.649,18.331-109.719,54.482 C-3.392,114.042-25.273,210.34,50.889,282.356c35.143,33.221,193.779,200.074,195.374,201.753c1.586,1.662,3.785,2.61,6.077,2.61 h0.008c2.291,0,4.482-0.94,6.068-2.594c1.603-1.679,160.667-168.163,195.458-201.837 C528.576,209.962,507.274,113.866,469.361,71.689z"></path> </g> </g> </g></svg> by <a href="https://www.cloudhousebd.com/" target="_blank">Cloud House Technologies</a> from Micro Initiatives. <br>Powered by Connecting Dots Bangladesh.</span>
+        <span class="text-muted text-center text-sm-left d-block d-sm-inline-block pt-4 mt-4 pb-2 mb-2" style="font-size: 18px;">Built with <svg fill="#ff0000" height="24px" width="24px" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="-20.16 -20.16 544.20 544.20" xml:space="preserve" stroke="#ff0000" transform="matrix(-1, 0, 0, 1, 0, 0)" stroke-width="0.00503876"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round" stroke="#CCCCCC" stroke-width="9.069768"></g><g id="SVGRepo_iconCarrier"> <g> <g> <path d="M469.361,71.689c-32.071-35.681-70.026-54.532-109.761-54.532c-44.309,0-84.27,27.01-107.654,71.638 c-23.334-44.628-62.993-71.638-106.857-71.638c-39.743,0-76.649,18.331-109.719,54.482 C-3.392,114.042-25.273,210.34,50.889,282.356c35.143,33.221,193.779,200.074,195.374,201.753c1.586,1.662,3.785,2.61,6.077,2.61 h0.008c2.291,0,4.482-0.94,6.068-2.594c1.603-1.679,160.667-168.163,195.458-201.837 C528.576,209.962,507.274,113.866,469.361,71.689z"></path> </g> </g> </g></svg> by <a href="https://www.cloudhousebd.com/" target="_blank">Cloud House Technologies</a> from Micro Initiatives.</span>
     </div>
 
 </body>

@@ -13,20 +13,15 @@ return new class extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->id();
-            $table->string('gender');
             $table->string('name');
             $table->string('email')->unique();
-            $table->string('phone')->unique();
-            $table->string('university')->nullable();
-            $table->string('batch')->nullable();
-            $table->string('education_year')->nullable();
-            $table->string('department')->nullable();
-            $table->string('hall')->nullable();
-            $table->enum('type', ['student', 'external_student', 'guest']);
-            $table->string('note')->nullable();
-            $table->timestamp('email_verified_at')->nullable();
+            $table->string('phone')->nullable();
+            $table->string('alt_phone')->nullable();
+            $table->string('gender')->nullable();
+            $table->string('nid')->nullable();
+            $table->string('blood_group')->nullable();
+            $table->string('jersey')->nullable();
             $table->string('password');
-            $table->rememberToken();
             $table->timestamps();
         });
 

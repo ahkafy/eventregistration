@@ -6,17 +6,8 @@
     <div class="col-md-6">
         <div class="card">
             <div class="card-bidy px-3 py-3 mx-3 my-3">
-                <h1>For Current Students of Jahangirnagar University.</h1>
-                <a href="{{ route('register.ju') }}" class="btn btn-dark btn-block mt-2">Click here to Register</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-md-6">
-        <div class="card">
-            <div class="card-bidy px-3 py-3 mx-3 my-3">
-                <h1>For Alumni Students of Jaahangirnagar University.</h1>
-                <a href="{{ route('register.alumni') }}" class="btn btn-dark btn-block mt-2">Click here to Register</a>
+                <h1>Register</h1>
+                <a href="{{ route('register.event') }}" class="btn btn-dark btn-block mt-2">Click here to Register</a>
             </div>
         </div>
     </div>

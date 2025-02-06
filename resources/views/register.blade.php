@@ -2,35 +2,19 @@
 
 @section('content')
 <div class="container">
-    <h3 class="pb-4 text-center"> This form is for Students of Jahangirnagar University Only. For others <a href="{{ route('register.other') }}">please click here to register.</a> </h3>
 
     <div class="row justify-content-center">
         <div class="col-md-6 pb-4">
-            <img src="{{ url('side.png') }}" width="100%" alt="">
+
         </div>
         <div class="col-md-6">
             <div class="card">
-                <div class="card-header">{{ __('Registration for Students of Jahangirnagar University') }}</div>
+                <div class="card-header">{{ __('Registration') }}</div>
 
                 <div class="card-body">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
-                        <div class="row mb-3">
-                            <label for="gender" class="col-md-4 col-form-label text-md-end">{{ __('Gender') }}</label>
-
-                            <div class="col-md-6">
-                                <select id="gender" type="text" class="form-select form-control @error('gender') is-invalid @enderror" name="gender" value="{{ old('gender') }}" required autocomplete="gender">
-                                    <option value="male">Male</option>
-                                    <option value="female">Female</option>
-                                </select>
-                                @error('gender')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
 
                         <div class="row mb-3">
                             <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('Name') }}</label>
@@ -39,20 +23,6 @@
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
                                 @error('name')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="row mb-3">
-                            <label for="phone" class="col-md-4 col-form-label text-md-end">{{ __('Phone') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone">
-
-                                @error('phone')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -74,16 +44,14 @@
                             </div>
                         </div>
 
-                        <input type="hidden" name="university" value="Jahangir Nagar University">
-                        <input type="hidden" name="education_year" value="-">
 
                         <div class="row mb-3">
-                            <label for="department" class="col-md-4 col-form-label text-md-end">{{ __('Department') }}</label>
+                            <label for="phone" class="col-md-4 col-form-label text-md-end">{{ __('Phone') }}</label>
 
                             <div class="col-md-6">
-                                <input id="department" type="text" class="form-control @error('department') is-invalid @enderror" name="department" value="{{ old('department') }}" required autocomplete="department">
+                                <input id="phone" type="text" class="form-control @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone">
 
-                                @error('department')
+                                @error('phone')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -92,12 +60,12 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="registration_number" class="col-md-4 col-form-label text-md-end">{{ __('Registration Number') }}</label>
+                            <label for="alt_phone" class="col-md-4 col-form-label text-md-end">{{ __('Alternative Phone') }}</label>
 
                             <div class="col-md-6">
-                                <input id="registration_number" type="text" class="form-control @error('registration_number') is-invalid @enderror" name="registration_number" value="{{ old('registration_number') }}" required autocomplete="registration_number">
+                                <input id="alt_phone" type="text" class="form-control @error('alt_phone') is-invalid @enderror" name="alt_phone" value="{{ old('alt_phone') }}" required autocomplete="alt_phone">
 
-                                @error('registration_number')
+                                @error('alt_phone')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -106,12 +74,29 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="batch" class="col-md-4 col-form-label text-md-end">{{ __('Batch') }}</label>
+                            <label for="gender" class="col-md-4 col-form-label text-md-end">{{ __('Gender') }}</label>
 
                             <div class="col-md-6">
-                                <input id="batch" type="text" class="form-control @error('batch') is-invalid @enderror" name="batch" value="{{ old('batch') }}" required autocomplete="batch">
+                                <select id="gender" type="text" class="form-select form-control @error('gender') is-invalid @enderror" name="gender" value="{{ old('gender') }}" required autocomplete="gender">
+                                    <option value="male">Male</option>
+                                    <option value="female">Female</option>
+                                </select>
+                                @error('gender')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
 
-                                @error('batch')
+
+                        <div class="row mb-3">
+                            <label for="nid" class="col-md-4 col-form-label text-md-end">{{ __('National ID') }}</label>
+
+                            <div class="col-md-6">
+                                <input id="nid" type="text" class="form-control @error('nid') is-invalid @enderror" name="nid" value="{{ old('nid') }}" required autocomplete="nid">
+
+                                @error('nid')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -120,12 +105,41 @@
                         </div>
 
                         <div class="row mb-3">
-                            <label for="hall" class="col-md-4 col-form-label text-md-end">{{ __('Hall') }}</label>
+                            <label for="blood_group" class="col-md-4 col-form-label text-md-end">{{ __('Blood Group') }}</label>
 
                             <div class="col-md-6">
-                                <input id="hall" type="text" class="form-control @error('hall') is-invalid @enderror" name="hall" value="{{ old('hall') }}" required autocomplete="hall">
+                                <select id="blood_group" type="text" class="form-select form-control @error('blood_group') is-invalid @enderror" name="blood_group" value="{{ old('blood_group') }}" required autocomplete="blood_group">
+                                    <option value="">Select Blood Group</option>
+                                    <option value="A+">A+</option>
+                                    <option value="A-">A-</option>
+                                    <option value="B+">B+</option>
+                                    <option value="B-">B-</option>
+                                    <option value="AB+">AB+</option>
+                                    <option value="AB-">AB-</option>
+                                    <option value="O+">O+</option>
+                                    <option value="O-">O-</option>
+                                </select>
+                                @error('blood_group')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
 
-                                @error('hall')
+                        <div class="row mb-3">
+                            <label for="jersey" class="col-md-4 col-form-label text-md-end">{{ __('Jersey Size') }}</label>
+
+                            <div class="col-md-6">
+                                <select id="jersey" type="text" class="form-select form-control @error('jersey') is-invalid @enderror" name="jersey" value="{{ old('jersey') }}" required autocomplete="jersey">
+                                    <option value="">Select Jersey Size</option>
+                                    <option value="S">S</option>
+                                    <option value="M">M</option>
+                                    <option value="L">L</option>
+                                    <option value="XL">XL</option>
+                                    <option value="XXL">XXL</option>
+                                </select>
+                                @error('jersey')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
@@ -154,9 +168,10 @@
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
                             </div>
                         </div>
-                        <hr>
-                            <h3 class="text-center">You need to pay 100 taka to complete the registration process and get access pass.</h3>
-                        <hr>
+
+                        <input type="hidden" name="education_year" value="-">
+                        <input type="hidden" name="hall" value="-">
+
                         <div class="row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
